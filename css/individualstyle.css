@@ -1,0 +1,41 @@
+body{
+    width: 95vw;
+    margin: auto;
+    font-family:'Courier New', Courier, monospace;
+    background-color: palevioletred;
+}
+
+h2 {
+    font-size: 3em;
+    color: aqua;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 2em;
+    color: teal;
+    font-weight: 600;
+}
+
+li {
+    font-size: 1em;
+    color:blueviolet;
+    font-weight: 600;
+
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+ul {
+    width: 40vw;
+    height: auto;
+    background-color: rgb(223, 190, 128);
+    border: 50px solid salmon;
+    border-radius: 20em;
+    margin: 1em;
+    text-align: center;
+}
