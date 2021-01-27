@@ -1,8 +1,31 @@
 body{
-    width: 95vw;
-    margin: auto;
-    background-color: cadetblue;
+    background-image: url(../images/IMG_1436.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
     font-family:'Courier New', Courier, monospace;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+#about p {
+    font-size: 12pt;
+    text-align: center;
+
+}
+
+
+
+@keyframes changes {
+    0% {transform: rotateZ(25deg);}
+    25% {transform: rotateZ(50deg);}
+    50% {transform: rotateZ(180deg);}
+    75% {transform: rotateZ(270deg);}
+    100% {transform: rotateZ(360deg);}
 }
 
 h2 {
@@ -24,33 +47,146 @@ li {
 
 }
 
+.border {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: calc(100vw - 12vw);
+    height:calc(100vh - 12vw);
+    border: 6vw solid rgba(0, 0, 0, 0.445);
+    animation-play-state: running;
+    transition: animation-play-state 1s;
+    animation-name: colors;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-fill-mode: backwards;
+    z-index: 2;
+}
+
+@keyframes colors {
+    0% {border-color: teal;}
+    25% {border-color: turquoise;}
+    50% {border-color: rgb(168, 111, 100);}
+    75% {border-color:wheat;}
+    100% {border-color: teal;}
+}
+
+.deco1 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-weight: 600;
+    width: 6vw;
+    height: 12vw;
+    border-radius: 2.5em;
+    background-color: sienna;
+    animation-play-state: running;
+    transition: animation-play-state 1s;
+    animation-name: tracking;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-fill-mode: backwards;
+    z-index: 3;
+}
+
+.deco2 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-weight: 600;
+    width: 6vw;
+    height: 12vw;
+    border-radius: 2.5em;
+    background-color: sienna;
+    animation-play-state: running;
+    transition: animation-play-state 1s;
+    animation-name: tracking;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    animation-fill-mode: backwards;
+    z-index: 3;
+}
+
+.deco3 {
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    width: 6vw;
+    height: 12vw;
+    border-radius: 2.5em;
+    background-color: sienna;
+    animation-play-state: running;
+    transition: animation-play-state 1s;
+    animation-name: tracking;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-fill-mode: backwards;
+    z-index: 3;
+}
+
+@keyframes tracking { 
+    0% {transform: translate(0vw, 0vh); width: 6vw; height: 6vw;}
+    12.5%{width: 12vw;height: 6vw;}
+    25% {transform: translate(calc(100vw - 6vw), 0vh); width: 6vw; height: 6vw;}
+    37.5%{width: 6vw; height: 12vw;}
+    50% {transform: translate(calc(100vw - 6vw), calc(100vh - 6vw)); width: 6vw; height: 6vw;}
+    62.5%{width: 12vw; height: 6vw;}
+    75% {transform: translate(0vw, calc(100vh - 6vw)); width: 6vw; height: 6vw;}
+    87.5%{width: 6vw; height: 12vw;}
+    100% {transform: translate(0vw, 0vh); width: 6vw; height: 6vw;}
+  }
+
 .main {
+    position: absolute;
+    top: 6vw;
+    bottom: 6vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    z-index: 4;
+    overflow: scroll;
+    scroll-behavior: smooth;
 }
 
+
 ul {
-    width: 10vw;
+    width: 15vw;
     height: 50vh;
+    margin: 5vw;
     overflow: hidden;
-    background-color: azure;
-    border: 10px solid teal;
-    border-radius: 50em;
-    margin: 1em;
-    z-index: 1;
+    background-color: rgba(240, 255, 255, 0.808);
+    border: 1vw solid rgba(0, 128, 128, 0.5);
+    border-radius: 50% 25%;
+
+
+    animation-play-state: running;
     transition: animation-play-state 1s;
     animation-name: flip;
     animation-timing-function: ease-out;
-    animation-iteration-count: 5;
-    animation-play-state: paused;
-    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
     animation-fill-mode: backwards;
-    transform: rotate(0deg);
 }
 
 ul:hover {
-    animation-play-state: running;
+    /* animation-play-state: running;
+    transition: animation-play-state 1s;
+    animation-name: flip;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    border-radius: 2vw; */
+
+    animation-play-state: paused;
     z-index: 2;
 }
 

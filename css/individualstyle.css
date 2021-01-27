@@ -1,5 +1,5 @@
 body{
-    width: 95vw;
+    width: 100vw;
     margin: auto;
     font-family:'Courier New', Courier, monospace;
     background-color: palevioletred;
@@ -18,24 +18,35 @@ h3 {
 }
 
 li {
-    font-size: 1em;
-    color:blueviolet;
-    font-weight: 600;
+    font-size: 2em;
+    color:rgb(184, 28, 75);
+    font-weight: 900;
 
 }
 
-.main {
+
+
+ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    z-index: 1;
+    top: 0px;
+    position: absolute;
 }
 
-ul {
-    width: 40vw;
-    height: auto;
-    background-color: rgb(223, 190, 128);
+div {
+    width: 30vw;
+    height: fit-content;
+    background-image: url(../images/IMG_1259.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     border: 50px solid salmon;
-    border-radius: 20em;
+    border-radius: 50em;
     margin: 1em;
     text-align: center;
+    list-style-position: inside;
+    list-style-type: circle;
+    padding-bottom: 5em;
 }
