@@ -1,52 +1,84 @@
 body{
-    width: 100vw;
-    margin: auto;
     font-family:'Courier New', Courier, monospace;
-    background-color: palevioletred;
-}
-
-h2 {
-    font-size: 3em;
-    color: aqua;
-    font-weight: 900;
-}
-
-h3 {
-    font-size: 2em;
-    color: teal;
-    font-weight: 600;
-}
-
-li {
-    font-size: 2em;
-    color:rgb(184, 28, 75);
-    font-weight: 900;
-
-}
-
-
-
-ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    z-index: 1;
-    top: 0px;
-    position: absolute;
-}
-
-div {
-    width: 30vw;
-    height: fit-content;
     background-image: url(../images/IMG_1259.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    border: 50px solid salmon;
-    border-radius: 50em;
-    margin: 1em;
+    background-position: center;
+    background-attachment: fixed;
+   
+}
+
+.home {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 23.5vh;
+    left: 80vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 2.5em;
+    text-align: center;
+    background-color:rgba(51, 60, 85, 0.651);
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+    color:  rgb(210, 228, 248);
+
+}
+
+h3 {
+    font-size: 1.5em;
+    color:  rgb(210, 228, 248);
+    font-weight: 700;
+
+}
+
+li {
+    font-size: 1em;
+    color: rgb(210, 228, 248);
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+ul {
+    position: absolute;
+    top: 20vh;
+    left: 20vh;
+    margin-bottom: 20vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+div {
+    box-shadow: 1vw 2vh .5vw 1vh  rgb(51, 60, 85, .75);
+    width: 20vw;
+    height: fit-content;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    margin-bottom: 10vh;
+    background-color: rgba(51, 60, 85, 0.651);
+    border: 1vw solid rgb(210, 228, 248);
+    border-radius: 15% 55%;
     text-align: center;
     list-style-position: inside;
     list-style-type: circle;
-    padding-bottom: 5em;
+ 
+
+    transition: transform 4s;
+}
+
+div:hover {
+    transform: scale(2) translate(calc(((100vw - 20vh) - 44vw)/4), 0px);
+    
 }
